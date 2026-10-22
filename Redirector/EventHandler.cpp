@@ -13,7 +13,7 @@ extern bool dnsOnly;
 extern vector<wstring> bypassList;
 extern vector<wstring> handleList;
 
-extern USHORT tcpListen;
+extern atomic<USHORT> tcpListen;
 
 DWORD CurrentID = 0;
 

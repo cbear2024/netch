@@ -1,7 +1,7 @@
 #include "TCPHandler.h"
 
-SOCKET tcpSocket = INVALID_SOCKET;
-USHORT tcpListen = 0;
+atomic<SOCKET> tcpSocket{ INVALID_SOCKET };
+atomic<USHORT> tcpListen{ 0 };
 
 mutex tcpLock;
 map<USHORT, SOCKADDR_IN6> tcpContext;
